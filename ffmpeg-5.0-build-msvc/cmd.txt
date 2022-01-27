@@ -1,0 +1,1 @@
+../ffmpeg-5.0/configure --enable-avdevice  --disable-shared --enable-static --disable-bzlib  --enable-gray --disable-libopenjpeg --disable-iconv --disable-zlib --toolchain=msvc --arch=x86_64 --prefix=../ffmpeg-5.0-installer  --disable-asm  --enable-debug
