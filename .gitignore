@@ -11,6 +11,7 @@
 *.sln.docstates
 *.patch
 *.o
+*.a
 tags
 
 # User-specific files (MonoDevelop/Xamarin Studio)
