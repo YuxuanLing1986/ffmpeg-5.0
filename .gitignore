@@ -405,15 +405,4 @@ FodyWeavers.xsd
 *.recipe
 
 # mtpanel build files
-tools/mtPanel/build/CMakeFiles
-tools/mtPanel/build/Debug
-tools/mtPanel/build/mtpanel.dir
-tools/mtPanel/build/Release
-tools/mtPanel/build/ResizableLib
-tools/mtPanel/build/Win32
-tools/mtPanel/build/cmake_install.cmake
-tools/mtPanel/build/CMakeCache.txt
-tools/mtPanel/g_mtpanel.cpp
-tools/mtPanel/g_mtpanel.h
-tools/mtPanel/build
 *.exe
