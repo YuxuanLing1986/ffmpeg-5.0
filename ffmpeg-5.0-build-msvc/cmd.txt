@@ -1,1 +1,8 @@
-../ffmpeg-5.0/configure --enable-avdevice  --disable-shared --enable-static --disable-bzlib  --enable-gray --disable-libopenjpeg --disable-iconv --disable-zlib --toolchain=msvc --arch=x86_64 --prefix=../ffmpeg-5.0-installer  --disable-asm  --enable-debug
+# 以下这条命令是可以的debug并且disable inline 优化的
+../ffmpeg-5.0/configure --enable-avdevice  --disable-shared --enable-static --disable-bzlib  --enable-gray --disable-libopenjpeg --disable-iconv --disable-zlib --toolchain=msvc --arch=x86_64 --prefix=../ffmpeg-5.0-installer  --disable-asm  --enable-debug --disable-optimizations --extra-cflags="-Od" --extra-cflags="-Ob0"
+
+
+#for disable optimization
+--disable-stripping --enable-debug=3 --extra-cflags="-gstabs+"
+--disable-optimizations --extra-cflags=-Og --extra-cflags=-fno-omit-frame-pointer --enable-debug --extra-cflags=-fno-inline  #then use ffmpeg_g
+--enable-debug --disable-stripping --extra-cflags=-Od  #不要--enable-debug=3 否则不能在MSVC下debug
