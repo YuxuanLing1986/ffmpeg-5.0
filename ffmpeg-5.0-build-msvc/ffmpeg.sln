@@ -9,7 +9,7 @@ Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "ffmpeg", "D:\tools\ffmpeg-5
 		Executable = D:\tools\ffmpeg-5.0\ffmpeg-5.0-build-msvc\ffmpeg_g.exe
 		RemoteMachine = LINGYUXUAN-DT
 		StartingDirectory = D:\tools\ffmpeg-5.0\ffmpeg-5.0-build-msvc\
-		Arguments = -y -i  D:\tools\jm_tools\Johnny_1280x720_24fps_600frames.bak.mp4  .\Johnny_1280x720_60.yuv
+		Arguments = -y -hwaccel dxva2 -threads 1 -i C:\VM-DT-SHARE\strms\4K-Chimei-inn-2011-1013_30p.264 -vframes 5 -pix_fmt yuv420p test.yuv
 		Environment = 默认值
 		LaunchingEngine = 00000000-0000-0000-0000-000000000000
 		UseLegacyDebugEngines = No
@@ -4339,6 +4339,551 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fftools", "fftools", "{935E
 		..\ffmpeg-5.0\fftools\Makefile = ..\ffmpeg-5.0\fftools\Makefile
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "directx", "directx", "{8D585A6C-D381-4FD4-995E-0B18B0F8AD2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dlist", "dlist", "{F7974E57-ADA8-40D2-8AFF-73184CE4FAF9}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\dlist\appname.c = C:\work\wddm\wddm\directx\dlist\appname.c
+		C:\work\wddm\wddm\directx\dlist\blacklist.c = C:\work\wddm\wddm\directx\dlist\blacklist.c
+		C:\work\wddm\wddm\directx\dlist\dlist.def = C:\work\wddm\wddm\directx\dlist\dlist.def
+		C:\work\wddm\wddm\directx\dlist\dlist.h = C:\work\wddm\wddm\directx\dlist\dlist.h
+		C:\work\wddm\wddm\directx\dlist\dlist.rc = C:\work\wddm\wddm\directx\dlist\dlist.rc
+		C:\work\wddm\wddm\directx\dlist\imgdlist.vcxproj = C:\work\wddm\wddm\directx\dlist\imgdlist.vcxproj
+		C:\work\wddm\wddm\directx\dlist\init.c = C:\work\wddm\wddm\directx\dlist\init.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dxva", "dxva", "{3D23513E-3BD9-408F-82DB-0F37D81167A1}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\dxva\adapter.c = C:\work\wddm\wddm\directx\dxva\adapter.c
+		C:\work\wddm\wddm\directx\dxva\adapter.h = C:\work\wddm\wddm\directx\dxva\adapter.h
+		C:\work\wddm\wddm\directx\dxva\caps.c = C:\work\wddm\wddm\directx\dxva\caps.c
+		C:\work\wddm\wddm\directx\dxva\caps.h = C:\work\wddm\wddm\directx\dxva\caps.h
+		C:\work\wddm\wddm\directx\dxva\coreinclude.h = C:\work\wddm\wddm\directx\dxva\coreinclude.h
+		C:\work\wddm\wddm\directx\dxva\d3d10_1_wrapper.h = C:\work\wddm\wddm\directx\dxva\d3d10_1_wrapper.h
+		C:\work\wddm\wddm\directx\dxva\d3d10umddi_wrapper.h = C:\work\wddm\wddm\directx\dxva\d3d10umddi_wrapper.h
+		C:\work\wddm\wddm\directx\dxva\decode_bits.c = C:\work\wddm\wddm\directx\dxva\decode_bits.c
+		C:\work\wddm\wddm\directx\dxva\decode_bits.h = C:\work\wddm\wddm\directx\dxva\decode_bits.h
+		C:\work\wddm\wddm\directx\dxva\decoder.c = C:\work\wddm\wddm\directx\dxva\decoder.c
+		C:\work\wddm\wddm\directx\dxva\decoder.h = C:\work\wddm\wddm\directx\dxva\decoder.h
+		C:\work\wddm\wddm\directx\dxva\device.c = C:\work\wddm\wddm\directx\dxva\device.c
+		C:\work\wddm\wddm\directx\dxva\device.h = C:\work\wddm\wddm\directx\dxva\device.h
+		C:\work\wddm\wddm\directx\dxva\DXVAToVAConvertion.c = C:\work\wddm\wddm\directx\dxva\DXVAToVAConvertion.c
+		C:\work\wddm\wddm\directx\dxva\encoder.c = C:\work\wddm\wddm\directx\dxva\encoder.c
+		C:\work\wddm\wddm\directx\dxva\encoder.h = C:\work\wddm\wddm\directx\dxva\encoder.h
+		C:\work\wddm\wddm\directx\dxva\errors.h = C:\work\wddm\wddm\directx\dxva\errors.h
+		C:\work\wddm\wddm\directx\dxva\init.c = C:\work\wddm\wddm\directx\dxva\init.c
+		C:\work\wddm\wddm\directx\dxva\kmdshared_example.h = C:\work\wddm\wddm\directx\dxva\kmdshared_example.h
+		C:\work\wddm\wddm\directx\dxva\resource.c = C:\work\wddm\wddm\directx\dxva\resource.c
+		C:\work\wddm\wddm\directx\dxva\resource.h = C:\work\wddm\wddm\directx\dxva\resource.h
+		C:\work\wddm\wddm\directx\dxva\trace.h = C:\work\wddm\wddm\directx\dxva\trace.h
+		C:\work\wddm\wddm\directx\dxva\utility.c = C:\work\wddm\wddm\directx\dxva\utility.c
+		C:\work\wddm\wddm\directx\dxva\utility.h = C:\work\wddm\wddm\directx\dxva\utility.h
+		C:\work\wddm\wddm\directx\dxva\va.h = C:\work\wddm\wddm\directx\dxva\va.h
+		C:\work\wddm\wddm\directx\dxva\va_enc_h264.h = C:\work\wddm\wddm\directx\dxva\va_enc_h264.h
+		C:\work\wddm\wddm\directx\dxva\va_version.h = C:\work\wddm\wddm\directx\dxva\va_version.h
+		C:\work\wddm\wddm\directx\dxva\video_codec_dec_common.h = C:\work\wddm\wddm\directx\dxva\video_codec_dec_common.h
+		C:\work\wddm\wddm\directx\dxva\video_codec_device.h = C:\work\wddm\wddm\directx\dxva\video_codec_device.h
+		C:\work\wddm\wddm\directx\dxva\video_codec_device_common.c = C:\work\wddm\wddm\directx\dxva\video_codec_device_common.c
+		C:\work\wddm\wddm\directx\dxva\video_codec_device_dec.c = C:\work\wddm\wddm\directx\dxva\video_codec_device_dec.c
+		C:\work\wddm\wddm\directx\dxva\video_codec_device_h264dec.c = C:\work\wddm\wddm\directx\dxva\video_codec_device_h264dec.c
+		C:\work\wddm\wddm\directx\dxva\video_codec_device_h264enc.c = C:\work\wddm\wddm\directx\dxva\video_codec_device_h264enc.c
+		C:\work\wddm\wddm\directx\dxva\vpuapi_dummy.c = C:\work\wddm\wddm\directx\dxva\vpuapi_dummy.c
+		C:\work\wddm\wddm\directx\dxva\vpuapi_dummy.h = C:\work\wddm\wddm\directx\dxva\vpuapi_dummy.h
+		C:\work\wddm\wddm\directx\dxva\vpuapifunc.h = C:\work\wddm\wddm\directx\dxva\vpuapifunc.h
+		C:\work\wddm\wddm\directx\dxva\vpuconfig.h = C:\work\wddm\wddm\directx\dxva\vpuconfig.h
+		C:\work\wddm\wddm\directx\dxva\vpuerror.h = C:\work\wddm\wddm\directx\dxva\vpuerror.h
+		C:\work\wddm\wddm\directx\dxva\vputypes.h = C:\work\wddm\wddm\directx\dxva\vputypes.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{37AB5250-295B-4C34-83DF-5C58734B8B33}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\include\dxvaddiinterface.h = C:\work\wddm\wddm\directx\include\dxvaddiinterface.h
+		C:\work\wddm\wddm\directx\include\dxvaddiinterface11.h = C:\work\wddm\wddm\directx\include\dxvaddiinterface11.h
+		C:\work\wddm\wddm\directx\include\dxvaH264Enc.h = C:\work\wddm\wddm\directx\include\dxvaH264Enc.h
+		C:\work\wddm\wddm\directx\include\mtH264Enc.h = C:\work\wddm\wddm\directx\include\mtH264Enc.h
+		C:\work\wddm\wddm\directx\include\pavpddiinterface.h = C:\work\wddm\wddm\directx\include\pavpddiinterface.h
+		C:\work\wddm\wddm\directx\include\vpcallbacks.h = C:\work\wddm\wddm\directx\include\vpcallbacks.h
+		C:\work\wddm\wddm\directx\include\vpddiinterface.h = C:\work\wddm\wddm\directx\include\vpddiinterface.h
+		C:\work\wddm\wddm\directx\include\vpddiinterface11.h = C:\work\wddm\wddm\directx\include\vpddiinterface11.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "umd", "umd", "{37DED40F-2ABE-4C15-9D54-672D9E31A15D}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\rgxrtview.c = C:\work\wddm\wddm\directx\umd\rgxrtview.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{BAFEDFCC-DC18-4893-B94C-CCA7127DEF50}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\common\adapter.c = C:\work\wddm\wddm\directx\umd\common\adapter.c
+		C:\work\wddm\wddm\directx\umd\common\backdoor.c = C:\work\wddm\wddm\directx\umd\common\backdoor.c
+		C:\work\wddm\wddm\directx\umd\common\cache.c = C:\work\wddm\wddm\directx\umd\common\cache.c
+		C:\work\wddm\wddm\directx\umd\common\cache.c-11a9fe6a = C:\work\wddm\wddm\directx\umd\common\cache.c-11a9fe6a
+		C:\work\wddm\wddm\directx\umd\common\circularbuffer.c = C:\work\wddm\wddm\directx\umd\common\circularbuffer.c
+		C:\work\wddm\wddm\directx\umd\common\clears.c = C:\work\wddm\wddm\directx\umd\common\clears.c
+		C:\work\wddm\wddm\directx\umd\common\colourconvert.c = C:\work\wddm\wddm\directx\umd\common\colourconvert.c
+		C:\work\wddm\wddm\directx\umd\common\commonregflags.c = C:\work\wddm\wddm\directx\umd\common\commonregflags.c
+		C:\work\wddm\wddm\directx\umd\common\d3dcontext.c = C:\work\wddm\wddm\directx\umd\common\d3dcontext.c
+		C:\work\wddm\wddm\directx\umd\common\device.c = C:\work\wddm\wddm\directx\umd\common\device.c
+		C:\work\wddm\wddm\directx\umd\common\dispatch.c = C:\work\wddm\wddm\directx\umd\common\dispatch.c
+		C:\work\wddm\wddm\directx\umd\common\draw.c = C:\work\wddm\wddm\directx\umd\common\draw.c
+		C:\work\wddm\wddm\directx\umd\common\errors.c = C:\work\wddm\wddm\directx\umd\common\errors.c
+		C:\work\wddm\wddm\directx\umd\common\etwhal.c = C:\work\wddm\wddm\directx\umd\common\etwhal.c
+		C:\work\wddm\wddm\directx\umd\common\failuretest.c = C:\work\wddm\wddm\directx\umd\common\failuretest.c
+		C:\work\wddm\wddm\directx\umd\common\ia.c = C:\work\wddm\wddm\directx\umd\common\ia.c
+		C:\work\wddm\wddm\directx\umd\common\overlay.c = C:\work\wddm\wddm\directx\umd\common\overlay.c
+		C:\work\wddm\wddm\directx\umd\common\penter.c = C:\work\wddm\wddm\directx\umd\common\penter.c
+		C:\work\wddm\wddm\directx\umd\common\profile.c = C:\work\wddm\wddm\directx\umd\common\profile.c
+		C:\work\wddm\wddm\directx\umd\common\pvp.c = C:\work\wddm\wddm\directx\umd\common\pvp.c
+		C:\work\wddm\wddm\directx\umd\common\query.c = C:\work\wddm\wddm\directx\umd\common\query.c
+		C:\work\wddm\wddm\directx\umd\common\render.c = C:\work\wddm\wddm\directx\umd\common\render.c
+		C:\work\wddm\wddm\directx\umd\common\resource.c = C:\work\wddm\wddm\directx\umd\common\resource.c
+		C:\work\wddm\wddm\directx\umd\common\semantic.c = C:\work\wddm\wddm\directx\umd\common\semantic.c
+		C:\work\wddm\wddm\directx\umd\common\shaders.c = C:\work\wddm\wddm\directx\umd\common\shaders.c
+		C:\work\wddm\wddm\directx\umd\common\state.c = C:\work\wddm\wddm\directx\umd\common\state.c
+		C:\work\wddm\wddm\directx\umd\common\swtransfer.c = C:\work\wddm\wddm\directx\umd\common\swtransfer.c
+		C:\work\wddm\wddm\directx\umd\common\topology.c = C:\work\wddm\wddm\directx\umd\common\topology.c
+		C:\work\wddm\wddm\directx\umd\common\transfer.c = C:\work\wddm\wddm\directx\umd\common\transfer.c
+		C:\work\wddm\wddm\directx\umd\common\uscutils.c = C:\work\wddm\wddm\directx\umd\common\uscutils.c
+		C:\work\wddm\wddm\directx\umd\common\utility.c = C:\work\wddm\wddm\directx\umd\common\utility.c
+		C:\work\wddm\wddm\directx\umd\common\vidproc.c = C:\work\wddm\wddm\directx\umd\common\vidproc.c
+		C:\work\wddm\wddm\directx\umd\common\vidproccb.c = C:\work\wddm\wddm\directx\umd\common\vidproccb.c
+		C:\work\wddm\wddm\directx\umd\common\views.c = C:\work\wddm\wddm\directx\umd\common\views.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "d3d10", "d3d10", "{848C3986-157F-48B1-B5CB-DE1F7D546D49}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10_lib.vcxproj = C:\work\wddm\wddm\directx\umd\d3d10\d3d10_lib.vcxproj
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10callbacks.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10callbacks.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10callbacks.h = C:\work\wddm\wddm\directx\umd\d3d10\d3d10callbacks.h
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddi.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddi.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddi.h = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddi.h
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddidecode.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddidecode.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddidecode.h = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddidecode.h
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddidummydxgientrypoints.h = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddidummydxgientrypoints.h
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddidxgi.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddidxgi.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddidxgientrypoints.h = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddidxgientrypoints.h
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddientrypoints.h = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddientrypoints.h
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddiia.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddiia.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddipvp.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddipvp.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddipvp.h = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddipvp.h
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddiquery.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddiquery.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddiresource.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddiresource.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddishader.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddishader.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddistate.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddistate.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddistrings.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddistrings.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddiviews.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddiviews.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddivp.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddivp.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddivp.h = C:\work\wddm\wddm\directx\umd\d3d10\d3d10ddivp.h
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10main.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10main.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10nullentry.c = C:\work\wddm\wddm\directx\umd\d3d10\d3d10nullentry.c
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10nullentry.h = C:\work\wddm\wddm\directx\umd\d3d10\d3d10nullentry.h
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d10Shaders.h = C:\work\wddm\wddm\directx\umd\d3d10\d3d10Shaders.h
+		C:\work\wddm\wddm\directx\umd\d3d10\d3d11ddi.h = C:\work\wddm\wddm\directx\umd\d3d10\d3d11ddi.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "d3d9", "d3d9", "{E4B26CA8-6A2C-4389-AA60-4F6FCFEB8B5E}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9_lib.vcxproj = C:\work\wddm\wddm\directx\umd\d3d9\d3d9_lib.vcxproj
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9callbacks.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9callbacks.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9callbacks.h = C:\work\wddm\wddm\directx\umd\d3d9\d3d9callbacks.h
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddi.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddi.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddi.h = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddi.h
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddi_wrapper.h = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddi_wrapper.h
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddidecode.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddidecode.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddidxvaext.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddidxvaext.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddioverlay.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddioverlay.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddipvp.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddipvp.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddiquery.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddiquery.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddiresource.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddiresource.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddishader.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddishader.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddistate.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddistate.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddivp.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9ddivp.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9decodecb.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9decodecb.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9main.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9main.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9nullentry.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9nullentry.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9nullentry.h = C:\work\wddm\wddm\directx\umd\d3d9\d3d9nullentry.h
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9rstate.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9rstate.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9tsstate.c = C:\work\wddm\wddm\directx\umd\d3d9\d3d9tsstate.c
+		C:\work\wddm\wddm\directx\umd\d3d9\d3d9UF.h = C:\work\wddm\wddm\directx\umd\d3d9\d3d9UF.h
+		C:\work\wddm\wddm\directx\umd\d3d9\fileList.txt = C:\work\wddm\wddm\directx\umd\d3d9\fileList.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "hwinclude", "hwinclude", "{BA0AD94E-061C-445D-A0D1-B5E980FDE2C9}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwcaps.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwcaps.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwcompute.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwcompute.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwdepthstencilstate.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwdepthstencilstate.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwdevice.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwdevice.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwia.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwia.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwimghal_featuredefs.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwimghal_featuredefs.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwinclude.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwinclude.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwomstate.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwomstate.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwquery.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwquery.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwraststate.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwraststate.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwrender.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwrender.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwresource.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwresource.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwshader.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwshader.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwta.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwta.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwtransfer.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwtransfer.h
+		C:\work\wddm\wddm\directx\umd\hwinclude\hwview.h = C:\work\wddm\wddm\directx\umd\hwinclude\hwview.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{39A72B2F-2360-4E5B-AE94-C3BCDB8985AE}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\include\adapter.h = C:\work\wddm\wddm\directx\umd\include\adapter.h
+		C:\work\wddm\wddm\directx\umd\include\adapter10.h = C:\work\wddm\wddm\directx\umd\include\adapter10.h
+		C:\work\wddm\wddm\directx\umd\include\adapter9.h = C:\work\wddm\wddm\directx\umd\include\adapter9.h
+		C:\work\wddm\wddm\directx\umd\include\allocation.h = C:\work\wddm\wddm\directx\umd\include\allocation.h
+		C:\work\wddm\wddm\directx\umd\include\apphint.h = C:\work\wddm\wddm\directx\umd\include\apphint.h
+		C:\work\wddm\wddm\directx\umd\include\backdoor.h = C:\work\wddm\wddm\directx\umd\include\backdoor.h
+		C:\work\wddm\wddm\directx\umd\include\backdoor_headers.h = C:\work\wddm\wddm\directx\umd\include\backdoor_headers.h
+		C:\work\wddm\wddm\directx\umd\include\cache.h = C:\work\wddm\wddm\directx\umd\include\cache.h
+		C:\work\wddm\wddm\directx\umd\include\cbuffer.h = C:\work\wddm\wddm\directx\umd\include\cbuffer.h
+		C:\work\wddm\wddm\directx\umd\include\circularbuffer.h = C:\work\wddm\wddm\directx\umd\include\circularbuffer.h
+		C:\work\wddm\wddm\directx\umd\include\clears.h = C:\work\wddm\wddm\directx\umd\include\clears.h
+		C:\work\wddm\wddm\directx\umd\include\colourconvert.h = C:\work\wddm\wddm\directx\umd\include\colourconvert.h
+		C:\work\wddm\wddm\directx\umd\include\commonptr_typedefs.h = C:\work\wddm\wddm\directx\umd\include\commonptr_typedefs.h
+		C:\work\wddm\wddm\directx\umd\include\context.h = C:\work\wddm\wddm\directx\umd\include\context.h
+		C:\work\wddm\wddm\directx\umd\include\d3d10_1_wrapper.h = C:\work\wddm\wddm\directx\umd\include\d3d10_1_wrapper.h
+		C:\work\wddm\wddm\directx\umd\include\d3d10resource.h = C:\work\wddm\wddm\directx\umd\include\d3d10resource.h
+		C:\work\wddm\wddm\directx\umd\include\d3d10umddi_wrapper.h = C:\work\wddm\wddm\directx\umd\include\d3d10umddi_wrapper.h
+		C:\work\wddm\wddm\directx\umd\include\d3d11_wrapper.h = C:\work\wddm\wddm\directx\umd\include\d3d11_wrapper.h
+		C:\work\wddm\wddm\directx\umd\include\d3d9resource.h = C:\work\wddm\wddm\directx\umd\include\d3d9resource.h
+		C:\work\wddm\wddm\directx\umd\include\d3dcallbacks.h = C:\work\wddm\wddm\directx\umd\include\d3dcallbacks.h
+		C:\work\wddm\wddm\directx\umd\include\defines.h = C:\work\wddm\wddm\directx\umd\include\defines.h
+		C:\work\wddm\wddm\directx\umd\include\device.h = C:\work\wddm\wddm\directx\umd\include\device.h
+		C:\work\wddm\wddm\directx\umd\include\dispatch.h = C:\work\wddm\wddm\directx\umd\include\dispatch.h
+		C:\work\wddm\wddm\directx\umd\include\draw.h = C:\work\wddm\wddm\directx\umd\include\draw.h
+		C:\work\wddm\wddm\directx\umd\include\errors.h = C:\work\wddm\wddm\directx\umd\include\errors.h
+		C:\work\wddm\wddm\directx\umd\include\etwhal.h = C:\work\wddm\wddm\directx\umd\include\etwhal.h
+		C:\work\wddm\wddm\directx\umd\include\failuretest.h = C:\work\wddm\wddm\directx\umd\include\failuretest.h
+		C:\work\wddm\wddm\directx\umd\include\ia.h = C:\work\wddm\wddm\directx\umd\include\ia.h
+		C:\work\wddm\wddm\directx\umd\include\overlay.h = C:\work\wddm\wddm\directx\umd\include\overlay.h
+		C:\work\wddm\wddm\directx\umd\include\profile.h = C:\work\wddm\wddm\directx\umd\include\profile.h
+		C:\work\wddm\wddm\directx\umd\include\pvp.h = C:\work\wddm\wddm\directx\umd\include\pvp.h
+		C:\work\wddm\wddm\directx\umd\include\query.h = C:\work\wddm\wddm\directx\umd\include\query.h
+		C:\work\wddm\wddm\directx\umd\include\registry.h = C:\work\wddm\wddm\directx\umd\include\registry.h
+		C:\work\wddm\wddm\directx\umd\include\render.h = C:\work\wddm\wddm\directx\umd\include\render.h
+		C:\work\wddm\wddm\directx\umd\include\resource.h = C:\work\wddm\wddm\directx\umd\include\resource.h
+		C:\work\wddm\wddm\directx\umd\include\resourcestructs.h = C:\work\wddm\wddm\directx\umd\include\resourcestructs.h
+		C:\work\wddm\wddm\directx\umd\include\semantic.h = C:\work\wddm\wddm\directx\umd\include\semantic.h
+		C:\work\wddm\wddm\directx\umd\include\shaders.h = C:\work\wddm\wddm\directx\umd\include\shaders.h
+		C:\work\wddm\wddm\directx\umd\include\state.h = C:\work\wddm\wddm\directx\umd\include\state.h
+		C:\work\wddm\wddm\directx\umd\include\swtransfer.h = C:\work\wddm\wddm\directx\umd\include\swtransfer.h
+		C:\work\wddm\wddm\directx\umd\include\system.h = C:\work\wddm\wddm\directx\umd\include\system.h
+		C:\work\wddm\wddm\directx\umd\include\ta.h = C:\work\wddm\wddm\directx\umd\include\ta.h
+		C:\work\wddm\wddm\directx\umd\include\tessellation.h = C:\work\wddm\wddm\directx\umd\include\tessellation.h
+		C:\work\wddm\wddm\directx\umd\include\topology.h = C:\work\wddm\wddm\directx\umd\include\topology.h
+		C:\work\wddm\wddm\directx\umd\include\transfer.h = C:\work\wddm\wddm\directx\umd\include\transfer.h
+		C:\work\wddm\wddm\directx\umd\include\uscmem.h = C:\work\wddm\wddm\directx\umd\include\uscmem.h
+		C:\work\wddm\wddm\directx\umd\include\uscutils.h = C:\work\wddm\wddm\directx\umd\include\uscutils.h
+		C:\work\wddm\wddm\directx\umd\include\utility.h = C:\work\wddm\wddm\directx\umd\include\utility.h
+		C:\work\wddm\wddm\directx\umd\include\vidproc.h = C:\work\wddm\wddm\directx\umd\include\vidproc.h
+		C:\work\wddm\wddm\directx\umd\include\views.h = C:\work\wddm\wddm\directx\umd\include\views.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rgx", "rgx", "{52CE7EAC-8EF4-4DC8-A187-A9BDDBEF10FE}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\rgx\bccomp.c = C:\work\wddm\wddm\directx\umd\rgx\bccomp.c
+		C:\work\wddm\wddm\directx\umd\rgx\cachemem.c = C:\work\wddm\wddm\directx\umd\rgx\cachemem.c
+		C:\work\wddm\wddm\directx\umd\rgx\cachemem.h = C:\work\wddm\wddm\directx\umd\rgx\cachemem.h
+		C:\work\wddm\wddm\directx\umd\rgx\flushmem.c = C:\work\wddm\wddm\directx\umd\rgx\flushmem.c
+		C:\work\wddm\wddm\directx\umd\rgx\flushmem.h = C:\work\wddm\wddm\directx\umd\rgx\flushmem.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgx_lib.vcxproj = C:\work\wddm\wddm\directx\umd\rgx\rgx_lib.vcxproj
+		C:\work\wddm\wddm\directx\umd\rgx\rgxadapter.c = C:\work\wddm\wddm\directx\umd\rgx\rgxadapter.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxbgobj.c = C:\work\wddm\wddm\directx\umd\rgx\rgxbgobj.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxblitobj.c = C:\work\wddm\wddm\directx\umd\rgx\rgxblitobj.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxbordercolour.c = C:\work\wddm\wddm\directx\umd\rgx\rgxbordercolour.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxbordercolour.h = C:\work\wddm\wddm\directx\umd\rgx\rgxbordercolour.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxbuffersideband.c = C:\work\wddm\wddm\directx\umd\rgx\rgxbuffersideband.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxbuffersideband.h = C:\work\wddm\wddm\directx\umd\rgx\rgxbuffersideband.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxcaps.c = C:\work\wddm\wddm\directx\umd\rgx\rgxcaps.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxccbdump.c = C:\work\wddm\wddm\directx\umd\rgx\rgxccbdump.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxccbdump.h = C:\work\wddm\wddm\directx\umd\rgx\rgxccbdump.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxcdm.c = C:\work\wddm\wddm\directx\umd\rgx\rgxcdm.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxcdm.h = C:\work\wddm\wddm\directx\umd\rgx\rgxcdm.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxclears.c = C:\work\wddm\wddm\directx\umd\rgx\rgxclears.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxclears.h = C:\work\wddm\wddm\directx\umd\rgx\rgxclears.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxconstants.c = C:\work\wddm\wddm\directx\umd\rgx\rgxconstants.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxconstants.h = C:\work\wddm\wddm\directx\umd\rgx\rgxconstants.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxcontext.c = C:\work\wddm\wddm\directx\umd\rgx\rgxcontext.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxcontext.h = C:\work\wddm\wddm\directx\umd\rgx\rgxcontext.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxcshader.c = C:\work\wddm\wddm\directx\umd\rgx\rgxcshader.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxcshader.h = C:\work\wddm\wddm\directx\umd\rgx\rgxcshader.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdbias.c = C:\work\wddm\wddm\directx\umd\rgx\rgxdbias.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdbias.h = C:\work\wddm\wddm\directx\umd\rgx\rgxdbias.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdce.c = C:\work\wddm\wddm\directx\umd\rgx\rgxdce.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdce.h = C:\work\wddm\wddm\directx\umd\rgx\rgxdce.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdevice.c = C:\work\wddm\wddm\directx\umd\rgx\rgxdevice.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdevice.h = C:\work\wddm\wddm\directx\umd\rgx\rgxdevice.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdispatch.c = C:\work\wddm\wddm\directx\umd\rgx\rgxdispatch.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdispatch.h = C:\work\wddm\wddm\directx\umd\rgx\rgxdispatch.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdraw.c = C:\work\wddm\wddm\directx\umd\rgx\rgxdraw.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdraw.h = C:\work\wddm\wddm\directx\umd\rgx\rgxdraw.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdshader.c = C:\work\wddm\wddm\directx\umd\rgx\rgxdshader.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdshader.h = C:\work\wddm\wddm\directx\umd\rgx\rgxdshader.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdsview.c = C:\work\wddm\wddm\directx\umd\rgx\rgxdsview.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxdsview.h = C:\work\wddm\wddm\directx\umd\rgx\rgxdsview.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxedgeflags.c = C:\work\wddm\wddm\directx\umd\rgx\rgxedgeflags.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxedgeflags.h = C:\work\wddm\wddm\directx\umd\rgx\rgxedgeflags.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxelementdesc.h = C:\work\wddm\wddm\directx\umd\rgx\rgxelementdesc.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxflush.c = C:\work\wddm\wddm\directx\umd\rgx\rgxflush.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxflush.h = C:\work\wddm\wddm\directx\umd\rgx\rgxflush.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxgshader.c = C:\work\wddm\wddm\directx\umd\rgx\rgxgshader.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxgshader.h = C:\work\wddm\wddm\directx\umd\rgx\rgxgshader.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxgshadergen.c = C:\work\wddm\wddm\directx\umd\rgx\rgxgshadergen.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxgshadergen.h = C:\work\wddm\wddm\directx\umd\rgx\rgxgshadergen.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxhshader.c = C:\work\wddm\wddm\directx\umd\rgx\rgxhshader.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxhshader.h = C:\work\wddm\wddm\directx\umd\rgx\rgxhshader.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxia.c = C:\work\wddm\wddm\directx\umd\rgx\rgxia.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxia.h = C:\work\wddm\wddm\directx\umd\rgx\rgxia.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgximghal_featuredefs.h = C:\work\wddm\wddm\directx\umd\rgx\rgximghal_featuredefs.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxinclude.h = C:\work\wddm\wddm\directx\umd\rgx\rgxinclude.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxmapshadow.c = C:\work\wddm\wddm\directx\umd\rgx\rgxmapshadow.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxmapshadow.h = C:\work\wddm\wddm\directx\umd\rgx\rgxmapshadow.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxmem.h = C:\work\wddm\wddm\directx\umd\rgx\rgxmem.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxmemory.c = C:\work\wddm\wddm\directx\umd\rgx\rgxmemory.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxomstate.c = C:\work\wddm\wddm\directx\umd\rgx\rgxomstate.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxpm.c = C:\work\wddm\wddm\directx\umd\rgx\rgxpm.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxpm.h = C:\work\wddm\wddm\directx\umd\rgx\rgxpm.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxpointer_typedefs.h = C:\work\wddm\wddm\directx\umd\rgx\rgxpointer_typedefs.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxppp.c = C:\work\wddm\wddm\directx\umd\rgx\rgxppp.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxppp.h = C:\work\wddm\wddm\directx\umd\rgx\rgxppp.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxpshader.c = C:\work\wddm\wddm\directx\umd\rgx\rgxpshader.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxpshader.h = C:\work\wddm\wddm\directx\umd\rgx\rgxpshader.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxpshadergen.c = C:\work\wddm\wddm\directx\umd\rgx\rgxpshadergen.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxpshadergen.h = C:\work\wddm\wddm\directx\umd\rgx\rgxpshadergen.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxquery.c = C:\work\wddm\wddm\directx\umd\rgx\rgxquery.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxquery.h = C:\work\wddm\wddm\directx\umd\rgx\rgxquery.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxraststate.c = C:\work\wddm\wddm\directx\umd\rgx\rgxraststate.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxraststate.h = C:\work\wddm\wddm\directx\umd\rgx\rgxraststate.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxregflags.c = C:\work\wddm\wddm\directx\umd\rgx\rgxregflags.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxregflags.h = C:\work\wddm\wddm\directx\umd\rgx\rgxregflags.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxrender.c = C:\work\wddm\wddm\directx\umd\rgx\rgxrender.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxrender.h = C:\work\wddm\wddm\directx\umd\rgx\rgxrender.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxresource.c = C:\work\wddm\wddm\directx\umd\rgx\rgxresource.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxresource.h = C:\work\wddm\wddm\directx\umd\rgx\rgxresource.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxrtview.c = C:\work\wddm\wddm\directx\umd\rgx\rgxrtview.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxrtview.h = C:\work\wddm\wddm\directx\umd\rgx\rgxrtview.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxsecondaryprogram.h = C:\work\wddm\wddm\directx\umd\rgx\rgxsecondaryprogram.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxshadercache.c = C:\work\wddm\wddm\directx\umd\rgx\rgxshadercache.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxshadercache.h = C:\work\wddm\wddm\directx\umd\rgx\rgxshadercache.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxshadergen.c = C:\work\wddm\wddm\directx\umd\rgx\rgxshadergen.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxshadergen.h = C:\work\wddm\wddm\directx\umd\rgx\rgxshadergen.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxshaderpatches.c = C:\work\wddm\wddm\directx\umd\rgx\rgxshaderpatches.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxshaderpatches.h = C:\work\wddm\wddm\directx\umd\rgx\rgxshaderpatches.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxshaders.c = C:\work\wddm\wddm\directx\umd\rgx\rgxshaders.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxshaders.h = C:\work\wddm\wddm\directx\umd\rgx\rgxshaders.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxso.c = C:\work\wddm\wddm\directx\umd\rgx\rgxso.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxso.h = C:\work\wddm\wddm\directx\umd\rgx\rgxso.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxspecobj.c = C:\work\wddm\wddm\directx\umd\rgx\rgxspecobj.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxspecobj.h = C:\work\wddm\wddm\directx\umd\rgx\rgxspecobj.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxsrview.c = C:\work\wddm\wddm\directx\umd\rgx\rgxsrview.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxsrview.h = C:\work\wddm\wddm\directx\umd\rgx\rgxsrview.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxstate.h = C:\work\wddm\wddm\directx\umd\rgx\rgxstate.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxstaticconsts.c = C:\work\wddm\wddm\directx\umd\rgx\rgxstaticconsts.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxstaticconsts.h = C:\work\wddm\wddm\directx\umd\rgx\rgxstaticconsts.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxsvblit.c = C:\work\wddm\wddm\directx\umd\rgx\rgxsvblit.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxsvblit.h = C:\work\wddm\wddm\directx\umd\rgx\rgxsvblit.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxtileableblit.c = C:\work\wddm\wddm\directx\umd\rgx\rgxtileableblit.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxtileableblit.h = C:\work\wddm\wddm\directx\umd\rgx\rgxtileableblit.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxtransfer.c = C:\work\wddm\wddm\directx\umd\rgx\rgxtransfer.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxtwiddle.c = C:\work\wddm\wddm\directx\umd\rgx\rgxtwiddle.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxtwiddle.h = C:\work\wddm\wddm\directx\umd\rgx\rgxtwiddle.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxuaview.c = C:\work\wddm\wddm\directx\umd\rgx\rgxuaview.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxuaview.h = C:\work\wddm\wddm\directx\umd\rgx\rgxuaview.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxuserpass.c = C:\work\wddm\wddm\directx\umd\rgx\rgxuserpass.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxuserpass.h = C:\work\wddm\wddm\directx\umd\rgx\rgxuserpass.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxvaryings.c = C:\work\wddm\wddm\directx\umd\rgx\rgxvaryings.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxvaryings.h = C:\work\wddm\wddm\directx\umd\rgx\rgxvaryings.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxvdm.c = C:\work\wddm\wddm\directx\umd\rgx\rgxvdm.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxvdm.h = C:\work\wddm\wddm\directx\umd\rgx\rgxvdm.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxvdmstate.c = C:\work\wddm\wddm\directx\umd\rgx\rgxvdmstate.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxvdmstate.h = C:\work\wddm\wddm\directx\umd\rgx\rgxvdmstate.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxvidproc.c = C:\work\wddm\wddm\directx\umd\rgx\rgxvidproc.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxviewport.c = C:\work\wddm\wddm\directx\umd\rgx\rgxviewport.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxviewport.h = C:\work\wddm\wddm\directx\umd\rgx\rgxviewport.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxvshader.c = C:\work\wddm\wddm\directx\umd\rgx\rgxvshader.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxvshader.h = C:\work\wddm\wddm\directx\umd\rgx\rgxvshader.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxvshadergen.c = C:\work\wddm\wddm\directx\umd\rgx\rgxvshadergen.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxvshadergen.h = C:\work\wddm\wddm\directx\umd\rgx\rgxvshadergen.h
+		C:\work\wddm\wddm\directx\umd\rgx\rgxzlsstate.c = C:\work\wddm\wddm\directx\umd\rgx\rgxzlsstate.c
+		C:\work\wddm\wddm\directx\umd\rgx\rgxzlsstate.h = C:\work\wddm\wddm\directx\umd\rgx\rgxzlsstate.h
+		C:\work\wddm\wddm\directx\umd\rgx\statehash.c = C:\work\wddm\wddm\directx\umd\rgx\statehash.c
+		C:\work\wddm\wddm\directx\umd\rgx\statehash.h = C:\work\wddm\wddm\directx\umd\rgx\statehash.h
+		C:\work\wddm\wddm\directx\umd\rgx\stubs.c = C:\work\wddm\wddm\directx\umd\rgx\stubs.c
+		C:\work\wddm\wddm\directx\umd\rgx\stubs.h = C:\work\wddm\wddm\directx\umd\rgx\stubs.h
+		C:\work\wddm\wddm\directx\umd\rgx\transalloc.h = C:\work\wddm\wddm\directx\umd\rgx\transalloc.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rgxtoken2uf", "rgxtoken2uf", "{DB10C762-3A83-41F3-9CD6-5DE91D32BA37}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\D3DOfflineCompiler.vcxproj = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\D3DOfflineCompiler.vcxproj
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\D3DOfflineCompiler.vcxproj.filters = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\D3DOfflineCompiler.vcxproj.filters
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\main.c = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\main.c
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderDebug.c = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderDebug.c
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderExpand.c = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderExpand.c
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderExpand.h = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderExpand.h
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderMapping.c = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderMapping.c
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderMapping.h = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderMapping.h
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderToUF.c = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderToUF.c
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderToUF.h = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d10ShaderToUF.h
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d9ShaderDebug.c = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d9ShaderDebug.c
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d9ShaderMapping.c = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d9ShaderMapping.c
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d9ShaderMapping.h = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d9ShaderMapping.h
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d9ShaderToUF.c = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d9ShaderToUF.c
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d9ShaderToUF.h = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\rgxd3d9ShaderToUF.h
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\tokendecode.c = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\tokendecode.c
+		C:\work\wddm\wddm\directx\umd\rgxtoken2uf\tokendecode.h = C:\work\wddm\wddm\directx\umd\rgxtoken2uf\tokendecode.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "system", "system", "{3718E7F8-9F14-4736-AE6E-C939394A6797}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\system\haletw.man = C:\work\wddm\wddm\directx\umd\system\haletw.man
+		C:\work\wddm\wddm\directx\umd\system\imghal.def = C:\work\wddm\wddm\directx\umd\system\imghal.def
+		C:\work\wddm\wddm\directx\umd\system\init.c = C:\work\wddm\wddm\directx\umd\system\init.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wddm", "wddm", "{29114689-5DAE-4F56-87A6-FF16D93E081D}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\wddm\allocation.c = C:\work\wddm\wddm\directx\umd\wddm\allocation.c
+		C:\work\wddm\wddm\directx\umd\wddm\apphint.c = C:\work\wddm\wddm\directx\umd\wddm\apphint.c
+		C:\work\wddm\wddm\directx\umd\wddm\cbuffer.c = C:\work\wddm\wddm\directx\umd\wddm\cbuffer.c
+		C:\work\wddm\wddm\directx\umd\wddm\system.c = C:\work\wddm\wddm\directx\umd\wddm\system.c
+		C:\work\wddm\wddm\directx\umd\wddm\wddm.h = C:\work\wddm\wddm\directx\umd\wddm\wddm.h
+		C:\work\wddm\wddm\directx\umd\wddm\wddmcallbacks.h = C:\work\wddm\wddm\directx\umd\wddm\wddmcallbacks.h
+		C:\work\wddm\wddm\directx\umd\wddm\wddmcbprivate.h = C:\work\wddm\wddm\directx\umd\wddm\wddmcbprivate.h
+		C:\work\wddm\wddm\directx\umd\wddm\wddmcbuffer.h = C:\work\wddm\wddm\directx\umd\wddm\wddmcbuffer.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wddm1_3", "wddm1_3", "{16445883-38E4-46E6-811E-3EDBF86D2BA3}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\wddm\wddm1_3\wddm13.c = C:\work\wddm\wddm\directx\umd\wddm\wddm1_3\wddm13.c
+		C:\work\wddm\wddm\directx\umd\wddm\wddm1_3\wddm13.h = C:\work\wddm\wddm\directx\umd\wddm\wddm1_3\wddm13.h
+		C:\work\wddm\wddm\directx\umd\wddm\wddm1_3\wddm13callbacks.c = C:\work\wddm\wddm\directx\umd\wddm\wddm1_3\wddm13callbacks.c
+		C:\work\wddm\wddm\directx\umd\wddm\wddm1_3\wddm13cbuffer.c = C:\work\wddm\wddm\directx\umd\wddm\wddm1_3\wddm13cbuffer.c
+		C:\work\wddm\wddm\directx\umd\wddm\wddm1_3\wddm13private.h = C:\work\wddm\wddm\directx\umd\wddm\wddm1_3\wddm13private.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wddm2_0", "wddm2_0", "{883DDBAF-43D9-4938-A629-F5B9E8F69343}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\umd\wddm\wddm2_0\wddm20.c = C:\work\wddm\wddm\directx\umd\wddm\wddm2_0\wddm20.c
+		C:\work\wddm\wddm\directx\umd\wddm\wddm2_0\wddm20.h = C:\work\wddm\wddm\directx\umd\wddm\wddm2_0\wddm20.h
+		C:\work\wddm\wddm\directx\umd\wddm\wddm2_0\wddm20callbacks.c = C:\work\wddm\wddm\directx\umd\wddm\wddm2_0\wddm20callbacks.c
+		C:\work\wddm\wddm\directx\umd\wddm\wddm2_0\wddm20cbuffer.c = C:\work\wddm\wddm\directx\umd\wddm\wddm2_0\wddm20cbuffer.c
+		C:\work\wddm\wddm\directx\umd\wddm\wddm2_0\wddm20private.h = C:\work\wddm\wddm\directx\umd\wddm\wddm2_0\wddm20private.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vidproc", "vidproc", "{056B0BD3-60F1-44F2-92AE-876E42063D2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{EF75181C-C221-4D98-90D3-852A54F0E0C2}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\vidproc\common\alloc.c = C:\work\wddm\wddm\directx\vidproc\common\alloc.c
+		C:\work\wddm\wddm\directx\vidproc\common\blockpool.c = C:\work\wddm\wddm\directx\vidproc\common\blockpool.c
+		C:\work\wddm\wddm\directx\vidproc\common\captureblit.c = C:\work\wddm\wddm\directx\vidproc\common\captureblit.c
+		C:\work\wddm\wddm\directx\vidproc\common\colourspace.c = C:\work\wddm\wddm\directx\vidproc\common\colourspace.c
+		C:\work\wddm\wddm\directx\vidproc\common\constriction.c = C:\work\wddm\wddm\directx\vidproc\common\constriction.c
+		C:\work\wddm\wddm\directx\vidproc\common\context.c = C:\work\wddm\wddm\directx\vidproc\common\context.c
+		C:\work\wddm\wddm\directx\vidproc\common\errors.c = C:\work\wddm\wddm\directx\vidproc\common\errors.c
+		C:\work\wddm\wddm\directx\vidproc\common\stream.c = C:\work\wddm\wddm\directx\vidproc\common\stream.c
+		C:\work\wddm\wddm\directx\vidproc\common\umdcallbacks.c = C:\work\wddm\wddm\directx\vidproc\common\umdcallbacks.c
+		C:\work\wddm\wddm\directx\vidproc\common\utility.c = C:\work\wddm\wddm\directx\vidproc\common\utility.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{7981F82B-1498-4ED4-9FAA-C4C5E86DC253}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\vidproc\common\include\captureblit.h = C:\work\wddm\wddm\directx\vidproc\common\include\captureblit.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cores", "cores", "{1FF90310-90E7-4329-9054-C87D54F938AE}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\vidproc\cores\param.c = C:\work\wddm\wddm\directx\vidproc\cores\param.c
+		C:\work\wddm\wddm\directx\vidproc\cores\pbe.c = C:\work\wddm\wddm\directx\vidproc\cores\pbe.c
+		C:\work\wddm\wddm\directx\vidproc\cores\pdsif.c = C:\work\wddm\wddm\directx\vidproc\cores\pdsif.c
+		C:\work\wddm\wddm\directx\vidproc\cores\registers.c = C:\work\wddm\wddm\directx\vidproc\cores\registers.c
+		C:\work\wddm\wddm\directx\vidproc\cores\tdm_registers.c = C:\work\wddm\wddm\directx\vidproc\cores\tdm_registers.c
+		C:\work\wddm\wddm\directx\vidproc\cores\uniforms.c = C:\work\wddm\wddm\directx\vidproc\cores\uniforms.c
+		C:\work\wddm\wddm\directx\vidproc\cores\usgif.c = C:\work\wddm\wddm\directx\vidproc\cores\usgif.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{5EC39A7B-3CD6-4F46-8186-A6B8FF8830DF}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\vidproc\cores\include\param.h = C:\work\wddm\wddm\directx\vidproc\cores\include\param.h
+		C:\work\wddm\wddm\directx\vidproc\cores\include\pbe.h = C:\work\wddm\wddm\directx\vidproc\cores\include\pbe.h
+		C:\work\wddm\wddm\directx\vidproc\cores\include\pdsif.h = C:\work\wddm\wddm\directx\vidproc\cores\include\pdsif.h
+		C:\work\wddm\wddm\directx\vidproc\cores\include\registers.h = C:\work\wddm\wddm\directx\vidproc\cores\include\registers.h
+		C:\work\wddm\wddm\directx\vidproc\cores\include\tdm.h = C:\work\wddm\wddm\directx\vidproc\cores\include\tdm.h
+		C:\work\wddm\wddm\directx\vidproc\cores\include\tdm_shaders.h = C:\work\wddm\wddm\directx\vidproc\cores\include\tdm_shaders.h
+		C:\work\wddm\wddm\directx\vidproc\cores\include\uniforms.h = C:\work\wddm\wddm\directx\vidproc\cores\include\uniforms.h
+		C:\work\wddm\wddm\directx\vidproc\cores\include\usgif.h = C:\work\wddm\wddm\directx\vidproc\cores\include\usgif.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tdm", "tdm", "{A0CA9232-12F0-423A-B89B-9A4E0AD91179}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\vidproc\cores\tdm\tdm_internal.h = C:\work\wddm\wddm\directx\vidproc\cores\tdm\tdm_internal.h
+		C:\work\wddm\wddm\directx\vidproc\cores\tdm\tdm_shaders.c = C:\work\wddm\wddm\directx\vidproc\cores\tdm\tdm_shaders.c
+		C:\work\wddm\wddm\directx\vidproc\cores\tdm\tdm_uniflex.c = C:\work\wddm\wddm\directx\vidproc\cores\tdm\tdm_uniflex.c
+		C:\work\wddm\wddm\directx\vidproc\cores\tdm\tdm_varying.c = C:\work\wddm\wddm\directx\vidproc\cores\tdm\tdm_varying.c
+		C:\work\wddm\wddm\directx\vidproc\cores\tdm\vp_tdm.c = C:\work\wddm\wddm\directx\vidproc\cores\tdm\vp_tdm.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ddi", "ddi", "{3C89CBC0-EC5A-4D5B-977C-55940699736D}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\vidproc\ddi\d3d11xvp.c = C:\work\wddm\wddm\directx\vidproc\ddi\d3d11xvp.c
+		C:\work\wddm\wddm\directx\vidproc\ddi\d3d9vp.c = C:\work\wddm\wddm\directx\vidproc\ddi\d3d9vp.c
+		C:\work\wddm\wddm\directx\vidproc\ddi\d3d9xvp.c = C:\work\wddm\wddm\directx\vidproc\ddi\d3d9xvp.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{D553CA7C-95CC-46C1-94AA-DAD48C81E559}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\vidproc\ddi\include\d3d11xvp.h = C:\work\wddm\wddm\directx\vidproc\ddi\include\d3d11xvp.h
+		C:\work\wddm\wddm\directx\vidproc\ddi\include\d3d9vp.h = C:\work\wddm\wddm\directx\vidproc\ddi\include\d3d9vp.h
+		C:\work\wddm\wddm\directx\vidproc\ddi\include\d3d9xvp.h = C:\work\wddm\wddm\directx\vidproc\ddi\include\d3d9xvp.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{E1C90D47-CA16-400E-8100-96C67DA7498C}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\vidproc\include\adapter.h = C:\work\wddm\wddm\directx\vidproc\include\adapter.h
+		C:\work\wddm\wddm\directx\vidproc\include\alloc.h = C:\work\wddm\wddm\directx\vidproc\include\alloc.h
+		C:\work\wddm\wddm\directx\vidproc\include\blockpool.h = C:\work\wddm\wddm\directx\vidproc\include\blockpool.h
+		C:\work\wddm\wddm\directx\vidproc\include\colourspace.h = C:\work\wddm\wddm\directx\vidproc\include\colourspace.h
+		C:\work\wddm\wddm\directx\vidproc\include\constriction.h = C:\work\wddm\wddm\directx\vidproc\include\constriction.h
+		C:\work\wddm\wddm\directx\vidproc\include\context.h = C:\work\wddm\wddm\directx\vidproc\include\context.h
+		C:\work\wddm\wddm\directx\vidproc\include\d3d10_1_wrapper.h = C:\work\wddm\wddm\directx\vidproc\include\d3d10_1_wrapper.h
+		C:\work\wddm\wddm\directx\vidproc\include\d3d10umddi_wrapper.h = C:\work\wddm\wddm\directx\vidproc\include\d3d10umddi_wrapper.h
+		C:\work\wddm\wddm\directx\vidproc\include\defines.h = C:\work\wddm\wddm\directx\vidproc\include\defines.h
+		C:\work\wddm\wddm\directx\vidproc\include\errors.h = C:\work\wddm\wddm\directx\vidproc\include\errors.h
+		C:\work\wddm\wddm\directx\vidproc\include\internal.h = C:\work\wddm\wddm\directx\vidproc\include\internal.h
+		C:\work\wddm\wddm\directx\vidproc\include\perfapi.h = C:\work\wddm\wddm\directx\vidproc\include\perfapi.h
+		C:\work\wddm\wddm\directx\vidproc\include\shadergen.h = C:\work\wddm\wddm\directx\vidproc\include\shadergen.h
+		C:\work\wddm\wddm\directx\vidproc\include\shared.h = C:\work\wddm\wddm\directx\vidproc\include\shared.h
+		C:\work\wddm\wddm\directx\vidproc\include\stream.h = C:\work\wddm\wddm\directx\vidproc\include\stream.h
+		C:\work\wddm\wddm\directx\vidproc\include\umdcallbacks.h = C:\work\wddm\wddm\directx\vidproc\include\umdcallbacks.h
+		C:\work\wddm\wddm\directx\vidproc\include\utility.h = C:\work\wddm\wddm\directx\vidproc\include\utility.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "system", "system", "{F062A252-825D-47C9-86C9-6301A0B9DD2E}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\vidproc\system\imgvidproc.def = C:\work\wddm\wddm\directx\vidproc\system\imgvidproc.def
+		C:\work\wddm\wddm\directx\vidproc\system\init.c = C:\work\wddm\wddm\directx\vidproc\system\init.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "uscgen", "uscgen", "{D5114ABF-DC13-4967-94D4-ACD67AE3D3D2}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\vidproc\uscgen\instructions.c = C:\work\wddm\wddm\directx\vidproc\uscgen\instructions.c
+		C:\work\wddm\wddm\directx\vidproc\uscgen\scenarios.c = C:\work\wddm\wddm\directx\vidproc\uscgen\scenarios.c
+		C:\work\wddm\wddm\directx\vidproc\uscgen\shadergen.c = C:\work\wddm\wddm\directx\vidproc\uscgen\shadergen.c
+		C:\work\wddm\wddm\directx\vidproc\uscgen\uscif.c = C:\work\wddm\wddm\directx\vidproc\uscgen\uscif.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{8B60D36D-A1F7-4B06-9B1E-A7EE602F77FA}"
+	ProjectSection(SolutionItems) = preProject
+		C:\work\wddm\wddm\directx\vidproc\uscgen\include\instdefs.h = C:\work\wddm\wddm\directx\vidproc\uscgen\include\instdefs.h
+		C:\work\wddm\wddm\directx\vidproc\uscgen\include\instructions.h = C:\work\wddm\wddm\directx\vidproc\uscgen\include\instructions.h
+		C:\work\wddm\wddm\directx\vidproc\uscgen\include\scenarios.h = C:\work\wddm\wddm\directx\vidproc\uscgen\include\scenarios.h
+		C:\work\wddm\wddm\directx\vidproc\uscgen\include\uscif.h = C:\work\wddm\wddm\directx\vidproc\uscgen\include\uscif.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|x64 = Release|x64
@@ -4405,6 +4950,33 @@ Global
 		{163DDE32-3A8E-486F-ADE6-A9008F91BAA7} = {FF2A4ADD-AA8C-498A-9863-C4CFE5092ADD}
 		{8D3BDEA5-735F-4B88-ABF2-4FE436DCC3F8} = {FF2A4ADD-AA8C-498A-9863-C4CFE5092ADD}
 		{935ED9B7-9E3B-4C89-81C5-0E5CB7D69729} = {DF2D7D75-170E-4B8F-8B7E-DE7331F59DB9}
+		{F7974E57-ADA8-40D2-8AFF-73184CE4FAF9} = {8D585A6C-D381-4FD4-995E-0B18B0F8AD2F}
+		{3D23513E-3BD9-408F-82DB-0F37D81167A1} = {8D585A6C-D381-4FD4-995E-0B18B0F8AD2F}
+		{37AB5250-295B-4C34-83DF-5C58734B8B33} = {8D585A6C-D381-4FD4-995E-0B18B0F8AD2F}
+		{37DED40F-2ABE-4C15-9D54-672D9E31A15D} = {8D585A6C-D381-4FD4-995E-0B18B0F8AD2F}
+		{BAFEDFCC-DC18-4893-B94C-CCA7127DEF50} = {37DED40F-2ABE-4C15-9D54-672D9E31A15D}
+		{848C3986-157F-48B1-B5CB-DE1F7D546D49} = {37DED40F-2ABE-4C15-9D54-672D9E31A15D}
+		{E4B26CA8-6A2C-4389-AA60-4F6FCFEB8B5E} = {37DED40F-2ABE-4C15-9D54-672D9E31A15D}
+		{BA0AD94E-061C-445D-A0D1-B5E980FDE2C9} = {37DED40F-2ABE-4C15-9D54-672D9E31A15D}
+		{39A72B2F-2360-4E5B-AE94-C3BCDB8985AE} = {37DED40F-2ABE-4C15-9D54-672D9E31A15D}
+		{52CE7EAC-8EF4-4DC8-A187-A9BDDBEF10FE} = {37DED40F-2ABE-4C15-9D54-672D9E31A15D}
+		{DB10C762-3A83-41F3-9CD6-5DE91D32BA37} = {37DED40F-2ABE-4C15-9D54-672D9E31A15D}
+		{3718E7F8-9F14-4736-AE6E-C939394A6797} = {37DED40F-2ABE-4C15-9D54-672D9E31A15D}
+		{29114689-5DAE-4F56-87A6-FF16D93E081D} = {37DED40F-2ABE-4C15-9D54-672D9E31A15D}
+		{16445883-38E4-46E6-811E-3EDBF86D2BA3} = {29114689-5DAE-4F56-87A6-FF16D93E081D}
+		{883DDBAF-43D9-4938-A629-F5B9E8F69343} = {29114689-5DAE-4F56-87A6-FF16D93E081D}
+		{056B0BD3-60F1-44F2-92AE-876E42063D2D} = {8D585A6C-D381-4FD4-995E-0B18B0F8AD2F}
+		{EF75181C-C221-4D98-90D3-852A54F0E0C2} = {056B0BD3-60F1-44F2-92AE-876E42063D2D}
+		{7981F82B-1498-4ED4-9FAA-C4C5E86DC253} = {EF75181C-C221-4D98-90D3-852A54F0E0C2}
+		{1FF90310-90E7-4329-9054-C87D54F938AE} = {056B0BD3-60F1-44F2-92AE-876E42063D2D}
+		{5EC39A7B-3CD6-4F46-8186-A6B8FF8830DF} = {1FF90310-90E7-4329-9054-C87D54F938AE}
+		{A0CA9232-12F0-423A-B89B-9A4E0AD91179} = {1FF90310-90E7-4329-9054-C87D54F938AE}
+		{3C89CBC0-EC5A-4D5B-977C-55940699736D} = {056B0BD3-60F1-44F2-92AE-876E42063D2D}
+		{D553CA7C-95CC-46C1-94AA-DAD48C81E559} = {3C89CBC0-EC5A-4D5B-977C-55940699736D}
+		{E1C90D47-CA16-400E-8100-96C67DA7498C} = {056B0BD3-60F1-44F2-92AE-876E42063D2D}
+		{F062A252-825D-47C9-86C9-6301A0B9DD2E} = {056B0BD3-60F1-44F2-92AE-876E42063D2D}
+		{D5114ABF-DC13-4967-94D4-ACD67AE3D3D2} = {056B0BD3-60F1-44F2-92AE-876E42063D2D}
+		{8B60D36D-A1F7-4B06-9B1E-A7EE602F77FA} = {D5114ABF-DC13-4967-94D4-ACD67AE3D3D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {00263718-7E8F-454E-B7BB-71969C195B65}

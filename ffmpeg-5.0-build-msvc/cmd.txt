@@ -7,5 +7,6 @@
 --disable-optimizations --extra-cflags=-Og --extra-cflags=-fno-omit-frame-pointer --enable-debug --extra-cflags=-fno-inline  #then use ffmpeg_g
 --enable-debug --disable-stripping --extra-cflags=-Od  #不要--enable-debug=3 否则不能在MSVC下debug
 
-#x264 zhuanma 
+#x264 转码 
 x264 --preset veryfast/veryslow  --tune animation --crf 18 -o %1.8bit.mkv %1
+
