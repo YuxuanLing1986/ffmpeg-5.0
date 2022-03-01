@@ -356,7 +356,7 @@ static int commit_bitstream_and_slice_buffer(AVCodecContext *avctx,
         position = slice->BSNALunitDataLocation;
         size     = slice->SliceBytesInBuffer;
         if (start_code_size + size > end - current) {
-            av_log(avctx, AV_LOG_ERROR, "Failed to build bitstream start_code_size = %d size = %d , end = %d, current = %d  ", start_code_size, size, end, current);
+            av_log(avctx, AV_LOG_ERROR, "Failed to build bitstream start_code_size = %d size = %d , end = 0x%p, current = 0x%p , end - current = %d  ", start_code_size, size, end, current, (end - current));
             break;
         }
 

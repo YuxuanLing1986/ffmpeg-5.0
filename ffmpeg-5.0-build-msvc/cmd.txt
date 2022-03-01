@@ -1,5 +1,5 @@
 # 以下这条命令是可以的debug并且disable inline 优化的
-../ffmpeg-5.0/configure --enable-avdevice  --disable-shared --enable-static --disable-bzlib  --enable-gray --disable-libopenjpeg --disable-iconv --disable-zlib --toolchain=msvc --arch=x86_64 --prefix=../ffmpeg-5.0-installer  --disable-asm  --enable-debug --disable-optimizations --extra-cflags="-Od" --extra-cflags="-Ob0"
+../ffmpeg-5.0/configure --enable-avdevice  --disable-shared --enable-static --disable-bzlib  --enable-gray --disable-libopenjpeg --disable-iconv --disable-zlib --toolchain=msvc --arch=x86_64 --prefix=../ffmpeg-5.0-installer  --disable-asm  --enable-debug --disable-optimizations --disable-stripping --extra-cflags="-Od" --extra-cflags="-Ob0"
 
 
 #for disable optimization
