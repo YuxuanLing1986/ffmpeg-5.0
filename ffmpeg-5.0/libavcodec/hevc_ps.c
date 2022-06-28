@@ -282,7 +282,10 @@ static int decode_profile_tier_level(GetBitContext *gb, AVCodecContext *avctx,
     else if (ptl->profile_idc == FF_PROFILE_HEVC_REXT)
         av_log(avctx, AV_LOG_DEBUG, "Range Extension profile bitstream\n");
     else
-        av_log(avctx, AV_LOG_WARNING, "Unknown HEVC profile: %d\n", ptl->profile_idc);
+    {
+        av_log(avctx, AV_LOG_WARNING, "Unknown HEVC profile: %d, set it to main profile\n", ptl->profile_idc);
+        ptl->profile_idc = FF_PROFILE_HEVC_MAIN;
+    }
 
     for (i = 0; i < 32; i++) {
         ptl->profile_compatibility_flag[i] = get_bits1(gb);
