@@ -64,6 +64,7 @@ static const int prof_mpeg2_main[]   = {FF_PROFILE_MPEG2_SIMPLE,
 static const int prof_h264_high[]    = {FF_PROFILE_H264_CONSTRAINED_BASELINE,
                                         FF_PROFILE_H264_BASELINE,
                                         FF_PROFILE_H264_MAIN,
+                                        FF_PROFILE_H264_EXTENDED,
                                         FF_PROFILE_H264_HIGH,
                                         FF_PROFILE_UNKNOWN};
 static const int prof_hevc_main[]    = {FF_PROFILE_HEVC_MAIN,
