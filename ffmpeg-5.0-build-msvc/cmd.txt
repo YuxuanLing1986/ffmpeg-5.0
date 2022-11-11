@@ -1,10 +1,15 @@
 export INCLUDE=$INCLUDE";C:\msys64\mingw64\SDL2-2.0.22\include"
+export INCLUDE=$INCLUDE";C:\msys64\mingw64\x264\include"
 export LIB=$LIB";C:\msys64\mingw64\SDL2-2.0.22\lib\x64"
+export LIB=$LIB";C:\msys64\mingw64\x264\lib"
 
 # 以下这条命令是可以的debug并且disable inline 优化的
-../ffmpeg-5.0/configure --enable-avdevice  --disable-shared --enable-static --disable-bzlib  --enable-gray --disable-libopenjpeg --disable-iconv --disable-zlib  --enable-sdl2 --toolchain=msvc --arch=x86_64 --prefix=../ffmpeg-5.0-installer  --disable-asm  --enable-debug --disable-optimizations --disable-stripping --extra-cflags="-Od" --extra-cflags="-Ob0"
+../ffmpeg-5.0/configure --prefix=../ffmpeg-5.0-installer --enable-avdevice  --disable-shared --enable-static --disable-bzlib  --enable-gray --disable-libopenjpeg --disable-iconv --disable-zlib  --toolchain=msvc --arch=x86_64   --disable-asm  --enable-debug --disable-optimizations --disable-stripping --extra-cflags="-Od" --extra-cflags="-Ob0"  ## --enable-sdl2
 
 --enable-sdl2
+--enable-libx264 --enable-gpl
+./../../sources/ffmpeg/configure --prefix=./../../installed/ --toolchain=msvc --arch=x86_64 --enable-libx264 --disable-asm --enable-static --enable-libx264 --enable-gpl
+
 #for disable optimization
 --disable-stripping --enable-debug=3 --extra-cflags="-gstabs+"
 --disable-optimizations --extra-cflags=-Og --extra-cflags=-fno-omit-frame-pointer --enable-debug --extra-cflags=-fno-inline  #then use ffmpeg_g
